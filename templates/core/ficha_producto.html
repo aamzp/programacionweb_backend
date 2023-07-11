@@ -1,0 +1,69 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block content %}
+
+<div class="row">
+    <br><br><br><br>
+</div>
+
+    <form method="post" id="formficha" >
+
+        {% csrf_token %}
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-0 col-md-1 col-lg-1 col-xl-1">
+                </div>
+                <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <img src="/media/{{ imagen }}" width="100%" class="shadow p-3 mb-5 bg-white " >
+                </div>
+                <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <h2 class="fw-bold mb-3">
+                        {{nombre }}
+                    </h2>
+
+                    <h4 >
+
+                            Descripción:
+
+                    </h4>
+                    <h5>
+                        {{ descripcion }}
+                    </h5>
+
+                        <p  class="shadow-sm border rounded-right p-2"><small>
+                            Recuerda que los usuarios que se subscriban tendran un descuento extra
+                            más la oportunidad de ganar productos que estamos sorteando
+                        </p>
+
+                    <input type="hidden" id="accion">
+
+                    <h2 class="mb-3">
+                        {{ html_precio|safe }} 
+                    </h2>
+                    <h4 class="text-dark">
+                        {{ html_estado|safe }}
+                    </h4>
+                    <p>
+                        {{ html_stock|safe }}
+                    </p>
+                    <br>
+                    <input type="hidden" id="accion">
+                    <button class="btn btn-primary ancho-150px" value=""> Comprar ahora </button>
+                    <a href="{% url 'agregar_producto_al_carrito' id %}" class="btn btn-secondary ancho-150px"> Agregar al carrito </a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-sm-0 col-md-1 col-lg-1 col-xl-1">
+    </div>
+    <div class="row">
+        <br><br><br><br><br>
+    </div>
+{% endblock content %}
+
+{% block script %}
+    <script src="{% static 'core/js/ficha.js' %}"></script>
+{% endblock script %}

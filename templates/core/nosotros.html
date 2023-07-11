@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <br>
+    <div-container-fluid>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-primary">Nosotros</h1>
+                <br>
+            </div>
+            <div class="row">
+                <p>
+                    Amigales PetShop nace el año 2022, en la ciudad de Santiago de Chile. Iniciamos nuestra tienda online con la clara
+                    intención de entrar al hermoso mercado de las mascotas para que estos se sientan acompañados y los amantes de
+                    mascotas sientan que estamos para atender a sus amados.
+                    <br>
+                    <br>
+                    Nuestro equipo lleva 1 año conociendo el mercado, tiempo que nos ha permitido conocer las necesidades de nuestras
+                    mascotas y la tendencia y sus distintas categorías.
+                    <br>
+                    <br>
+                    No solo somos una tienda online, también queremos orientar, asesorar, interactuar con los amantes de mascotas,
+                    estaremos, con nuestro equipo humano muy atento en RRSS y nuestra web para brindarte la más variada cantidad de marcas
+                    idóneas para tu mascota. En este sentido, nosotro trabajamos con organizaciones y gran parte de nuestras ganancias
+                    se van a aquellas. 
+                    <br>
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div-container-fluid>
+    <!--cartas-->
+    <div-container-fluid>
+        <div class="container-sm">
+            <h1>Equipo</h1>
+                <br>
+                <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+                            <div class="card mb-4 box-shadow" style="width: 18rem;">
+                                <img class="card-img-top" src="{% static 'core/IMG/user_icon_149340.png'%}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Juan Gabriel</h5>
+                                    <p class="card-text">Gerente General</p>
+                                    <a href="#">juanga@amigales.cl</a> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+                            <div class="card mb-4 box-shadow" style="width: 18rem;">
+                                <img class="card-img-top" src="{% static 'core/IMG/user_kids_avatar_icon_149311.png'%}"  alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pedro Moya</h5>
+                                    <p class="card-text">Encargado de Marketing</p>
+                                    <a href="#">p.moya@amigales.cl</a> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+                            <div class="card mb-4 box-shadow" style="width: 18rem;">
+                                <img class="card-img-top" src="{% static 'core/IMG/user_user_profile_user_icon_user_thump_icon_149317.png'%}"  alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Solid Snake</h5>
+                                    <p class="card-text">Subgerente</p>
+                                    <a href="#">s.snkae@amigales.cl</a> 
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div-container-fluid>                
+    <br>
+</div>
+</div>
+
+{% endblock content %}
